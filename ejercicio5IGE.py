@@ -35,3 +35,5 @@ alumnos_notas = zip(alumnos, notas)
 
 for num , (nom ,nota,estado) in enumerate(registrar_aprobados(alumnos_notas),start=1):
     print(f"#{num} -> {nom} : {nota} ({estado})")
+    
+print ("hola mundo")

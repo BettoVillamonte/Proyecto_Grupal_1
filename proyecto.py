@@ -81,6 +81,54 @@ def menu():
     print("\t6 - salir")
 
   
-
+while True:
+    menu()
+    opcionMenu = input("Ingrese un numero  -> ")
         
      
+        
+    if opcionMenu == "1":
+        print("")
+        print("Has pulsado la opción 1...")
+#Sugerencias
+        pokemon = int(input("Ingrese Generacion :"))
+
+        if pokemon >8 or pokemon==0:
+            print("Esa generacion no existe")
+        else:
+            generacion_pokemon(str(pokemon))
+
+    elif opcionMenu == "2":
+        print("")
+        print("Has pulsado la opción 2...")
+#Sugerencias
+        pokemon = input("Ingrese Forma :")
+        forma_pokemon(pokemon)
+
+    elif opcionMenu == "3":
+        print("")
+        print("Has pulsado la opción 3...")
+#Sugerencias
+        pokemon = input("Ingrese Habilidad :")
+        hablidad_pokemon(pokemon)
+    elif opcionMenu == "4":
+        print("")
+        print("Has pulsado la opción 4...")
+# Sugerencias
+        pokemon = input("Ingrese Habitat :")
+        habitat_pokemon(pokemon)
+
+    elif opcionMenu == "5":
+        print("")
+        print("Has pulsado la opción 5...")
+# Sugerencias
+        pokemon = input("Ingrese Tipo :")
+        tipo_pokemon(pokemon)
+    elif opcionMenu == "6":
+        break
+    else:
+        print("")
+        input("No has pulsado ninguna opción correcta...\nda Enter para volver al Menu")
+        print("")
+        
+ 

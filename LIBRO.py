@@ -19,4 +19,33 @@ class Biblioteca:
     def file_name(self, value):
         self._file_name = value
 
+    def load_book_line_by_line(self, file_name):
+        print("== Lectura desde disco duro ==")
+        archivo = open(file_name)
+        self._file_name = file_name
+        lines = archivo.readlines()
+        self._books.clear()
+        for line in lines:
+            book_temp = Book(1, "", "", "", "", "")
+            array = line.split(',')
+            count_column = 0
+            for item in array:
+                if count_column == 0:
+                    book_temp.id = item
+                elif count_column == 1:
+                    book_temp.title = item
+                elif count_column == 2:
+                    book_temp.genre = item
+                elif count_column == 3:
+                    book_temp.editorial = item
+                elif count_column == 4:
+                    book_temp.isbn = item
+                elif count_column == 5:
+                    book_temp.authors = item
+                else:
+                    book_temp.authors += ',' + item
+                count_column += 1
+            book_temp.print()
+            self._books.append(book_temp)
+
 

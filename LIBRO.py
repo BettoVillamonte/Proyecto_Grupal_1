@@ -48,4 +48,22 @@ class Biblioteca:
             book_temp.print()
             self._books.append(book_temp)
 
+            
+
+    def create_book(self):
+        print(" == Registro de Libro ==")
+        book2 = Book(1, "", "", "", "", "")
+        id = input("Ingresar ID: ")
+        title = input("Ingresar titulo: ")
+        genre = input("Ingresar Genero: ")
+        editorial = input("Ingresar editorial: ")
+        isbn = input("Ingresar el ISBN: ")
+        authors = input("Ingresar autor(es): ")
+        book2.create_book(int(id), title, genre, isbn, editorial, authors)
+        print("libro registrado con exito")
+        book2.print()
+        self._books.append(book2)
+            
+            
+            
 

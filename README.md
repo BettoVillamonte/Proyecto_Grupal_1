@@ -6,4 +6,4 @@ Joel Enrique Ramirez Garay
 
 Betto Estiwar Villamonte yunga
 
-
+Yoselin Rudas Basaldua

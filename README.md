@@ -1,7 +1,7 @@
 # Proyecto_Grupal_1
 
-ITENGRANTES
+INTEGRANTES
 
-JOEL ENRIQUE RAMIREZ GARAY
+Joel Enrique Ramirez Garay
 
 Betto Estiwar Villamonte yunga

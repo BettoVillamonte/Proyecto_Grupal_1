@@ -114,4 +114,30 @@ class Biblioteca:
         else:
             print("Opcion de busqueda invalida")
             
+    def busqueda_tipo(self, tipo_busqueda, texto_a_buscar):
+        libros_encontrados: List[Book] = []
+        for book in self._books:
+            if tipo_busqueda == 1:
+                if texto_a_buscar.lower() in book.isbn.lower():
+                    libros_encontrados.append(book)
+            if tipo_busqueda == 2:
+                if texto_a_buscar.lower() in book.title.lower():
+                    libros_encontrados.append(book)
+            if tipo_busqueda == 3:
+                if texto_a_buscar.lower() in book.authors.lower():
+                    libros_encontrados.append(book)
+            if tipo_busqueda == 4:
+                if texto_a_buscar.lower() in book.genre.lower():
+                    libros_encontrados.append(book)
+            if tipo_busqueda == 5:
+                if texto_a_buscar.lower() in book.editorial.lower():
+                    libros_encontrados.append(book)
+            if tipo_busqueda == 6:
+                if texto_a_buscar == book.id:
+                    libros_encontrados.append(book)
+            if tipo_busqueda == 7:
+                if book.cant_autores == int(texto_a_buscar):
+                    libros_encontrados.append(book)
+        return libros_encontrados
+
 

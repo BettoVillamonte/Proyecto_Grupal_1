@@ -39,3 +39,15 @@ def forma_pokemon(forma):
     for a in data['pokemon_species']:
         nom_pok = a['name']
         list_nom_hab_fot(nom_pok)
+
+        
+        
+        
+        
+def tipo_pokemon(tipo):
+    url = "https://pokeapi.co/api/v2/type/" + tipo
+    r = requests.get(url)
+    data = r.json()
+    for ver in data['pokemon']:
+        nom_pok=ver['pokemon']['name']
+        list_nom_hab_fot(nom_pok)        

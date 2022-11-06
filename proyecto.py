@@ -124,4 +124,11 @@ while True:
 # Sugerencias
         pokemon = input("Ingrese Tipo :")
         tipo_pokemon(pokemon)
+    elif opcionMenu == "6":
+        break
+    else:
+        print("")
+        input("No has pulsado ninguna opción correcta...\nda Enter para volver al Menu")
+        print("")
+        
  

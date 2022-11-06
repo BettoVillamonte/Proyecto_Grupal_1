@@ -179,3 +179,10 @@ class Biblioteca:
         texto_a_buscar = int(input("Ingrese la cantidad de autores a buscar: "))
         self.print_collection(self.busqueda_tipo(7, texto_a_buscar))    
 
+    def ordenar_libros(self):
+        print(" == Ordenar libros por Titulo ==")
+        libros_por_ordenar: List[Book] = self._books
+        libros_ordenados = sorted(libros_por_ordenar, key =lambda i: i.title)
+        self._books = libros_ordenados
+        print("Ordenamiento realizado con exito")
+        self.listar()

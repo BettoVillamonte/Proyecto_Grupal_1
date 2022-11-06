@@ -84,3 +84,29 @@ def menu():
 
         
      
+        
+    if opcionMenu == "1":
+        print("")
+        print("Has pulsado la opción 1...")
+#Sugerencias
+        pokemon = int(input("Ingrese Generacion :"))
+
+        if pokemon >8 or pokemon==0:
+            print("Esa generacion no existe")
+        else:
+            generacion_pokemon(str(pokemon))
+
+    elif opcionMenu == "2":
+        print("")
+        print("Has pulsado la opción 2...")
+#Sugerencias
+        pokemon = input("Ingrese Forma :")
+        forma_pokemon(pokemon)
+
+    elif opcionMenu == "3":
+        print("")
+        print("Has pulsado la opción 3...")
+#Sugerencias
+        pokemon = input("Ingrese Habilidad :")
+        hablidad_pokemon(pokemon)
+  

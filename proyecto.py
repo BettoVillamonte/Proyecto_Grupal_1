@@ -19,3 +19,23 @@ def list_nom_hab_fot(nom_pok):
             for s in habilidad['abilities']:
                 print(f"\t{s['ability']['name'].capitalize()} ")
         print("")
+
+def generacion_pokemon(generacion):
+    url = "https://pokeapi.co/api/v2/generation/" + generacion
+    r = requests.get(url)
+    data = r.json()
+
+    print(f"La Generacion # {generacion} es : {data['main_region']['name']}")
+    for a in data['pokemon_species']:
+        nom_pok = a['name']
+        list_nom_hab_fot(nom_pok)
+
+
+def forma_pokemon(forma):
+    url = "https://pokeapi.co/api/v2/pokemon-shape/" + forma
+    r = requests.get(url)
+    data = r.json()
+
+    for a in data['pokemon_species']:
+        nom_pok = a['name']
+        list_nom_hab_fot(nom_pok)

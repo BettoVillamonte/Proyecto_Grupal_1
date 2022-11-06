@@ -186,3 +186,10 @@ class Biblioteca:
         self._books = libros_ordenados
         print("Ordenamiento realizado con exito")
         self.listar()
+
+
+    def print_collection(self, listaLibros:List[Book]):
+        for libro in listaLibros:
+            libro.print()
+
+        

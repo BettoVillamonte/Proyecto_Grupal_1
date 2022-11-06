@@ -83,7 +83,7 @@ def menu():
   
 while True:
     menu()
-    opcionMenu = input("Insgrese un numero  -> ")
+    opcionMenu = input("Ingrese un numero  -> ")
         
      
         

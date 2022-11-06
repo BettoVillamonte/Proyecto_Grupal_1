@@ -192,4 +192,21 @@ class Biblioteca:
         for libro in listaLibros:
             libro.print()
 
-        
+if __name__ == "__main__":
+    biblioteca1 = Biblioteca()
+
+    def run_program():
+        print("Bievenido a mi pograma:")
+        print("-" * 10, "Menú", "-" * 10)
+        print("1) Leer archivo de disco duro (.txt o csv) que cargue 3 libros.\n"
+              "2) Listar libros.\n"
+              "3) Agregar libro.\n"
+              "4) Eliminar libro.\n"
+              "5) Buscar libro por ISBN o por título.\n"
+              "6) Ordenar libros por título.\n"
+              "7) Buscar libros por autor, editorial o género.\n"
+              "8) Buscar libros por número de autores.\n"
+              "9) Editar o actualizar datos de un libro (título, género, ISBN, editorial y autores).\n"
+              "10) Guardar libros en archivo de disco duro (.txt o csv)")
+        option = input("Ingrese una de estas opciones: ")
+            

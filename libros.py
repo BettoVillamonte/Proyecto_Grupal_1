@@ -33,4 +33,15 @@ def Listado():
         for row in csv_iterable:
             print(row['id'], ",", row['titulo'], ",", row['genero']
                   , ",", row['isbn'], ",", row['editorial'], ",", row['autores'])
+            
+def listarlibros():
+    with open(libros_db) as csv_file:
+        csv_iterable = csv.DictReader(csv_file)
+
+        print("Estos son los Libros")
+        for row in csv_iterable:
+            print(row['titulo'])
+
+Listado()
+listarlibros() 
 

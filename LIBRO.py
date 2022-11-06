@@ -235,3 +235,11 @@ if __name__ == "__main__":
             biblioteca1.save_all()
         x = "y"
             
+        while x.lower() == "y":
+            x = input("Ingrese opcion Volver al Menu = y | Salir = n: ")
+            if x.lower() == "y":
+                run_program()
+            if x.lower() == "n":
+                raise SystemExit
+
+    run_program()

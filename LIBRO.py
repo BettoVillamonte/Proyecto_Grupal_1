@@ -209,4 +209,29 @@ if __name__ == "__main__":
               "9) Editar o actualizar datos de un libro (título, género, ISBN, editorial y autores).\n"
               "10) Guardar libros en archivo de disco duro (.txt o csv)")
         option = input("Ingrese una de estas opciones: ")
+         
+
+        if option == "1":
+            file_name = input("Ingrese nombre de archivo + extension (Ejemplo: libro_1.csv) : ")
+            biblioteca1.load_book_line_by_line(file_name)
+        elif option == "2":
+            biblioteca1.listar()
+        elif option == "3":
+            biblioteca1.create_book()
+        elif option == "4":
+            id = input("Ingresar ID a eliminar: ")
+            biblioteca1.eliminar(id)
+        elif option == "5":
+            biblioteca1.buscar_por_isbn_titulo()
+        elif option == "6":
+            biblioteca1.ordenar_libros()
+        elif option == "7":
+            biblioteca1.buscar_por_otros()
+        elif option == "8":
+            biblioteca1.busqueda_cant_autores()
+        elif option == "9":
+            biblioteca1.edit_book()
+        elif option == "10":
+            biblioteca1.save_all()
+        x = "y"
             

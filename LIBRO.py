@@ -97,5 +97,21 @@ class Biblioteca:
             print("Opcion de busqueda invalida")
 
             
+
+    def buscar_por_otros(self):
+        print("== Busqueda por autor(es), genero, editorial ==")
+        opcion = int(
+            input("Ingrese 1 para buscar por autor(es), 2 para buscar por genero o 3 para buscar por editorial: "))
+        if opcion == 1:
+            texto_buscar = input("Ingresa los autor(es) a buscar: ")
+            self.print_collection(self.busqueda_tipo(3, texto_buscar))
+        elif opcion == 2:
+            texto_buscar = input("Ingrese el genero a buscar: ")
+            self.print_collection(self.busqueda_tipo(4, texto_buscar))
+        elif opcion == 3:
+            texto_buscar = input("Ingrese la editorial a buscar: ")
+            self.print_collection(self.busqueda_tipo(5, texto_buscar))
+        else:
+            print("Opcion de busqueda invalida")
             
 

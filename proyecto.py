@@ -39,3 +39,22 @@ def forma_pokemon(forma):
     for a in data['pokemon_species']:
         nom_pok = a['name']
         list_nom_hab_fot(nom_pok)
+
+def hablidad_pokemon(habilidad):
+    url = "https://pokeapi.co/api/v2/ability/" + habilidad
+    r = requests.get(url)
+    data = r.json()
+
+    for ver in data['pokemon']:
+        nom_pok = ver['pokemon']['name']
+        list_nom_hab_fot(nom_pok)
+
+
+def habitat_pokemon(habitat):
+    url = "https://pokeapi.co/api/v2/pokemon-habitat/" + habitat
+    r = requests.get(url)
+    data = r.json()
+
+    for ver in data['pokemon_species']:
+        nom_pok= ver['name']
+        list_nom_hab_fot(nom_pok)

@@ -111,4 +111,17 @@ while True:
 #Sugerencias
         pokemon = input("Ingrese Habilidad :")
         hablidad_pokemon(pokemon)
-  
+ elif opcionMenu == "4":
+        print("")
+        print("Has pulsado la opción 4...")
+# Sugerencias
+        pokemon = input("Ingrese Habitat :")
+        habitat_pokemon(pokemon)
+
+    elif opcionMenu == "5":
+        print("")
+        print("Has pulsado la opción 5...")
+# Sugerencias
+        pokemon = input("Ingrese Tipo :")
+        tipo_pokemon(pokemon)
+ 

@@ -64,6 +64,38 @@ class Biblioteca:
         book2.print()
         self._books.append(book2)
             
+
+
+    def listar(self):
+        print("== Listado de libros ==")
+        for book in self._books:
+            book.print()
+
+    def eliminar(self, id_eliminar):
+        print("== Eliminando libro ==")
+        found = -1
+        position = 0
+        for book in self._books:
+            if book.id == int(id_eliminar):
+                found = position
+            position += 1
+        if found != -1:
+            del self._books[found]
+            print("Libro eliminado con exito")
+
+
+    def buscar_por_isbn_titulo(self):
+        print("Busqueda por ISBN o por titulo")
+        opcion = int(input("Ingrese 1 para buscar por ISBN o 2 para buscar por titulo: "))
+        if opcion == 1:
+            texto_buscar = input("Ingresa el ISBN a buscar: ")
+            self.print_collection(self.busqueda_tipo(opcion, texto_buscar))
+        elif opcion == 2:
+            texto_buscar = input("Ingrese el titulo a buscar: ")
+            self.print_collection(self.busqueda_tipo(opcion, texto_buscar))
+        else:
+            print("Opcion de busqueda invalida")
+
             
             
 

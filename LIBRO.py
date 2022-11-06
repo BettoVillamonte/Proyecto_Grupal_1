@@ -140,4 +140,42 @@ class Biblioteca:
                     libros_encontrados.append(book)
         return libros_encontrados
 
+    
+    
+    
+    def edit_book(self):
+        libro_id = int(input("Ingrese el ID del libro a modificar: "))
+        libros_encontrados = self.busqueda_tipo(6,libro_id)
+        libro_a_modificar = libros_encontrados[0]
+        title = input("Ingresar titulo: ")
+        genre = input("Ingresar Genero: ")
+        editorial = input("Ingresar editorial: ")
+        isbn = input("Ingresar el ISBN: ")
+        authors = input("Ingresar autor(es): ")
+        libro_a_modificar.update(title, genre, editorial, isbn, authors)
+        print("Libro actualizado con exito")
+        libro_a_modificar.print()
+
+    def save_all(self):
+        print("== Guardado con exito ==")
+        archivo = open(self._file_name, 'r+')
+        archivo.truncate(0)
+        for libro in self._books:
+            archivo.write(str(libro.id))
+            archivo.write(",")
+            archivo.write(libro.title)
+            archivo.write(",")
+            archivo.write(libro.genre)
+            archivo.write(",")
+            archivo.write(libro.editorial)
+            archivo.write(",")
+            archivo.write(libro.isbn)
+            archivo.write(",")
+            archivo.write(libro.authors)
+        archivo.close()
+
+    def busqueda_cant_autores(self):
+        print("== Busqueda por  cantidad de autores ==")
+        texto_a_buscar = int(input("Ingrese la cantidad de autores a buscar: "))
+        self.print_collection(self.busqueda_tipo(7, texto_a_buscar))    
 

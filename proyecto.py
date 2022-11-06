@@ -81,7 +81,9 @@ def menu():
     print("\t6 - salir")
 
   
-
+while True:
+    menu()
+    opcionMenu = input("Insgrese un numero  -> ")
         
      
         

@@ -103,6 +103,7 @@ while True:
         print("")
         print("Has pulsado la opción 2...")
 #Sugerencias
+        print("Formas Pokemon: --> ball,squiggle,fish,arms,blob,upright,legs,quadruped,wings")
         pokemon = input("Ingrese Forma :")
         forma_pokemon(pokemon)
 

@@ -111,12 +111,14 @@ while True:
         print("")
         print("Has pulsado la opción 3...")
 #Sugerencias
+        print("Habilidades Pokemon --> stench,drizzle,speed-boost,battle-armor,sturdy,damp,limber")
         pokemon = input("Ingrese Habilidad :")
         hablidad_pokemon(pokemon)
     elif opcionMenu == "4":
         print("")
         print("Has pulsado la opción 4...")
 # Sugerencias
+        print("HABITAT Pokemon --> cave,forest,grassland,mountain,rare,rough-terrain,sea")
         pokemon = input("Ingrese Habitat :")
         habitat_pokemon(pokemon)
 
@@ -124,6 +126,7 @@ while True:
         print("")
         print("Has pulsado la opción 5...")
 # Sugerencias
+        print("TIPOS Pokemon --> normal,fighting,flying,poison,ground,bug,ghost")
         pokemon = input("Ingrese Tipo :")
         tipo_pokemon(pokemon)
     elif opcionMenu == "6":

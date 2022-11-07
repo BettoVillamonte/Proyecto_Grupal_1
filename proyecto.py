@@ -64,10 +64,13 @@ def habitat_pokemon(habitat):
 def tipo_pokemon(tipo):
     url = "https://pokeapi.co/api/v2/type/" + tipo
     r = requests.get(url)
-    data = r.json()
-    for ver in data['pokemon']:
-        nom_pok=ver['pokemon']['name']
-        list_nom_hab_fot(nom_pok)
+    if r.status_code == 404:
+        print("**--Este TIPO no se encuentra --**")
+    else:
+        data = r.json()
+        for ver in data['pokemon']:
+            nom_pok=ver['pokemon']['name']
+            list_nom_hab_fot(nom_pok)
         
  
 def menu():

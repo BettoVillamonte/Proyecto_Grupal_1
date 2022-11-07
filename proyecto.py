@@ -91,6 +91,7 @@ while True:
         print("")
         print("Has pulsado la opción 1...")
 #Sugerencias
+        print("\t     Generaciones : 1,2,3,4,5,6,7,8")
         pokemon = int(input("Ingrese Generacion :"))
 
         if pokemon >8 or pokemon==0:
